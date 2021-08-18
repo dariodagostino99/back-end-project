@@ -1,0 +1,1 @@
+Hi! this is my initial project. I will try to make it work by my own, the idea is to be able to make a crud work perfecty fine, using a mysql database, making apis and the connect it with a front made in react. Much fun!
