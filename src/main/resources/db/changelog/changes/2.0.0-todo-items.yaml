@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: dario
+      changes:
+        - createTable:
+            tableName: todo_items
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: author
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: date
+                  constraints:
+                    nullable: true
+              - column:
+                  name: updated_at
+                  type: date
+                  constraints:
+                    nullable: true

@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: dario-project-back
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none
+    generate-ddl: false
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/backproject?useUnicode=yes&characterEncodign=UTF-8
+    username: dario
+    password: superdardo
+  data:
+    solr:
+      host: http://localhost:8983/solr
+
+---
+
+my-properties:
+  app:
+    name: back-project
+    description: testing some configuration settings
+

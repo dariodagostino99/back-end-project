@@ -1,0 +1,77 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: dario
+      changes:
+        - createTable:
+            tableName: students
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    autoIncrement: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: age
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: dni
+                  type: bigint
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 2
+      author: dario
+      changes:
+        - dropTable:
+            tableName: students
+
+  - changeSet:
+      id: 3
+      author: dario
+      changes:
+        - createTable:
+            tableName: students
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: age
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: dni
+                  type: bigint
+                  constraints:
+                    nullable: false
